@@ -37,7 +37,7 @@ export default {
         primaryMedium: ["BentonSansMedium"],
         primaryBlack: ["BentonSansBlack"],
         viga: ["viga"],
-        inter: ["inter"]
+        inter: ["Inter", "sans-serif"],
       }
     }
   },

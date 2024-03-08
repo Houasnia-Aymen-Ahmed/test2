@@ -9,9 +9,14 @@
 </template>
 
 <script>
+import { IonButtons,  IonButton,  } from "@ionic/vue";
 export default {
   props: {
     text: String
+  },
+  components:{
+    IonButtons,
+    IonButton,
   }
-};
+}
 </script>

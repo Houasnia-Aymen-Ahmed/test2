@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-cover bg-pattern w-full h-screen bg-white flex justify-center">
+  <div class="bg-cover bg-pattern w-full h-screen bg-white flex flex-col items-center justify-center">
     <ion-card
       class="shadow-none w-[65.066%] bg-transparent flex flex-col items-center justify-start"
     >
@@ -16,16 +16,22 @@
         </ion-card-title>
       </ion-card-header>
       <ion-card-content
-        class="font-primarySans text-center text-[12px] leading-[21.66px] font-normal mt-[20px]"
+        class="font-inter text-left text-[13px] leading-[15.73px] tracking-[1px] font-semibold text-black"
       >
-        content
+        Deliver Favorite Food
       </ion-card-content>
     </ion-card>
+    <h3 class="font-primaryBold text-center text-[20px] leading-[26.2px] font-normal text-black">Login to your Account</h3>
+    <!-- Add TextFields -->
+    <p class="font-primaryBold text-center text-[12px] leading-[19.98px] font-normal text-black">Or continue with</p>
+    <p class="font-primaryMedium text-center text-[12px] leading-[19.98px] font-normal bg-green-gradient bg-clip-text text-transparent">Forget your password?</p>
+    <primary-btn text="Login" />
   </div>
 </template>
 
 <script>
 import { Logo } from "@/assets/images";
+import PrimaryBtn from "@/components/PrimaryBtn.vue";
 import {
   IonCard,
   IonCardHeader,
@@ -36,16 +42,18 @@ import {
 
 export default {
   name: "LoginPage",
-  component: {
+  components: {
     IonCard,
     IonCardHeader,
     IonCardTitle,
     IonCardContent,
-    IonImg
+    IonImg,
+    PrimaryBtn
   },
   data() {
     return {
       Logo
+      
     };
   }
 };

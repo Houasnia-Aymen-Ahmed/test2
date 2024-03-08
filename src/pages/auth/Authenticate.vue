@@ -1,4 +1,3 @@
-<!-- Authenticate.vue -->
 <template>
   <ion-page>
     <component :is="currentPage" @switchPage="switchPage" />

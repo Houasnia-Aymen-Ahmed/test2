@@ -18,7 +18,7 @@
         {{ content }}
       </ion-card-content>
     </ion-card>
-    <PrimaryBtn text="Next" />
+    <primary-btn text="Next" />
   </div>
 </template>
 
@@ -44,7 +44,6 @@ export default {
     IonCardHeader,
     IonCardTitle,
     IonCardContent,
-
     PrimaryBtn
   }
 };
