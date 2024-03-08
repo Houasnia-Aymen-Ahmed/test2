@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "@ionic/vue-router";
-import GetStarted from "../pages/get-started/GetStarted.vue";
+import { GetStarted, Authenticate } from "../pages";
 
 const routes = [
   {
@@ -9,6 +9,11 @@ const routes = [
   {
     path: "/get-started",
     component: GetStarted
+  },
+  {
+    path: "/authenticate",
+    name: "Authenticate",
+    component: Authenticate
   }
 ];
 

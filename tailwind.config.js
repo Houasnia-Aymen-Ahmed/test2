@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        pattern: 'url("@/assets/images/Pattern.png")',
+        "green-gradient":
+          "linear-gradient(98.81deg, #53e88b -0.82%, #15be77 101.53%)"
+      },
       colors: {
         primary: {
           DEFAULT: "#FFAD1D",
@@ -24,13 +29,15 @@ export default {
           200: "#86848F",
           300: "#444352",
           400: "#09051C"
-        },
+        }
       },
       fontFamily: {
         primarySans: ["BentonSansBook", "sans-serif"],
         primaryBold: ["BentonSansBold"],
         primaryMedium: ["BentonSansMedium"],
-        primaryBlack: ["BentonSansBlack"]
+        primaryBlack: ["BentonSansBlack"],
+        viga: ["viga"],
+        inter: ["inter"]
       }
     }
   },

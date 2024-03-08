@@ -1,6 +1,7 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Viga&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -264,6 +265,7 @@ html {
   --ion-dynamic-font: var(--ion-default-dynamic-font);
 }
 
-.btn-gradient {
-  background: linear-gradient(98.81deg, #53e88b -0.82%, #15be77 101.53%);
+/* .btn-gradient {
+  @apply bg-green-gradient
 }
+ */
