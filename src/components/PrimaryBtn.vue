@@ -1,0 +1,22 @@
+<template>
+  <ion-buttons>
+    <ion-button
+      class="bg-green-gradient font-primaryBold text-center text-[16px] leading-[20.96px] font-normal rounded-[15px] px-[60px] py-[18px] text-white"
+    >
+      {{ text }}
+    </ion-button>
+  </ion-buttons>
+</template>
+
+<script>
+import { IonButtons,  IonButton,  } from "@ionic/vue";
+export default {
+  props: {
+    text: String
+  },
+  components:{
+    IonButtons,
+    IonButton,
+  }
+}
+</script>
