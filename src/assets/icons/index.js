@@ -1,37 +1,53 @@
-import buy from "./buy.png";
+import buy from "./buy.svg";
 import camera from "./camera.png";
-import cancel from "./cancel.png";
-import chat from "./chat.png";
-import check from "./check.png";
-import coin from "./coin.png";
-import facebook from "./facebook.png";
+import call from "./call.svg";
+import chat from "./chat.svg";
+import facebook from "./facebook.svg";
+import filter from "./filter.svg";
 import gallery from "./gallery.png";
-import google from "./google.png";
-import home from "./home.png";
-import location from "./location.png";
-import lock from "./lock.png";
-import message from "./message.png";
-import profile from "./profile.png";
-import show from "./show.png";
-import success from "./success.png";
-import voucher from "./voucher.png";
+import google from "./google.svg";
+import home from "./home.svg";
+import location from "./location.svg";
+import lock from "./lock.svg";
+import message from "./message.svg";
+import notification_icon from "./notification_icon.svg";
+import notification_icon_circle from "./notification_icon_circle.svg";
+import profile from "./profile.svg";
+import send from "./send.svg";
+import show from "./show.svg";
+import check from "./check.png";
+import trash from "./trash.svg";
+import voucher from "./voucher.svg";
+import location_sharp from "./location_sharp.svg";
+import location_outline from "./location_outline.svg";
+import half_star from "./half_star.svg";
+import star from "./star.svg";
+import edit from "./edit.svg";
 
 export {
   buy,
   camera,
-  cancel,
+  call,
   chat,
-  check,
-  coin,
   facebook,
+  filter,
   gallery,
   google,
   home,
   location,
   lock,
   message,
+  notification_icon,
+  notification_icon_circle,
   profile,
+  send,
   show,
-  success,
-  voucher
+  check,
+  trash,
+  voucher,
+  location_sharp,
+  location_outline,
+  half_star,
+  star,
+  edit
 };

@@ -1,5 +1,8 @@
 import BakeResto from "./BakeResto.png";
 import bgOne from "./bgOne.png";
+import Cancel from "./cancel.png";
+import Success from "./success.png";
+import Coin from "./coin.png";
 import FruitSalad from "./FruitSalad.png";
 import GoodFood from "./GoodFood.png";
 import GreenNoddle from "./GreenNoddle.png";
@@ -13,7 +16,9 @@ import Logo from "./Logo.png";
 import Meat1 from "./Meat1.png";
 import Meat2 from "./Meat2.png";
 import NeatResto from "./NeatResto.png";
+import Pattern_cta from "./Pattern_cta.png";
 import Pattern from "./Pattern.png";
+import PatternMasked from "./PatternMasked.png";
 import Person1 from "./Person1.png";
 import Person2 from "./Person2.png";
 import Person3 from "./Person3.png";
@@ -31,6 +36,9 @@ import VeganResto from "./VeganResto.png";
 export {
   BakeResto,
   bgOne,
+  Cancel,
+  Success,
+  Coin,
   FruitSalad,
   GoodFood,
   GreenNoddle,
@@ -44,7 +52,9 @@ export {
   Meat1,
   Meat2,
   NeatResto,
+  Pattern_cta,
   Pattern,
+  PatternMasked,
   Person1,
   Person2,
   Person3,

@@ -1,21 +1,23 @@
 <template>
-  <ion-page>
-    <component :is="currentPage" @switchPage="switchPage" />
+  <ion-page class="w-full h-screen">
+    <ion-content scrollY="false">
+      <component :is="currentPage" @switchPage="switchPage" />
+    </ion-content>
   </ion-page>
 </template>
 
 <script>
-import { IonPage } from "@ionic/vue";
+import { IonContent, IonPage } from "@ionic/vue";
 
 import LoginPage from "./LoginPage.vue";
-import SignUp from "./sign-up/SignUp.vue";
+import SignUpWrapper from "./sign-up/SignUpWrapper.vue";
 
 export default {
   name: "Authenticate",
-  components: { IonPage, LoginPage, SignUp },
+  components: { IonPage, IonContent, LoginPage, SignUpWrapper },
   data() {
     return {
-      currentPage: "LoginPage"
+      currentPage: "SignUpWrapper"
     };
   },
   methods: {

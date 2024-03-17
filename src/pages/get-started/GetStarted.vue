@@ -1,13 +1,14 @@
 <template>
   <ion-page class="w-full h-screen">
     <ion-content>
-      <swiper>
+      <swiper class="w-full h-screen" @swiper="onSwiper">
         <template v-for="s in swiperData" :key="s.id">
           <swiper-slide>
             <page-template
               :image="s.image"
               :title="s.title"
               :content="s.content"
+              @moveToNextSlide="moveToNextSlide"
             />
           </swiper-slide>
         </template>
@@ -21,7 +22,7 @@ import { ref } from "vue";
 import PageTemplate from "./PageTemplate.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-//import "swiper/components/pagination/pagination.css";
+
 import {
   IllustrationGetStarted1,
   IllustrationGetStarted2
@@ -51,16 +52,8 @@ export default {
         image: IllustrationGetStarted2
       }
     ]);
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
     return {
-      swiperData,
-      onSwiper,
-      onSlideChange
+      swiperData
     };
   },
   data() {
@@ -68,7 +61,23 @@ export default {
       IllustrationGetStarted1,
       IllustrationGetStarted2
     };
+  },
+  methods: {
+    onSwiper(swiper) {
+      this.swiper = swiper;
+    },
+
+    moveToNextSlide() {
+      if (this.swiper) {
+        if (this.swiper.isEnd) {
+          this.$router.push("/authenticate");
+        } else {
+          this.swiper.slideNext();
+        }
+      } else {
+        console.error("Swiper instance not available.");
+      }
+    }
   }
 };
 </script>
-./PageTemplate.vue
