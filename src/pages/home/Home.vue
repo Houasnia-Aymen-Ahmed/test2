@@ -95,6 +95,16 @@ export default {
       activeTab: localStorage.getItem("activeTab") || "home"
     };
   },
+  mounted() {
+    // Set initial active tab based on current route
+    this.activeTab = this.$route.path.split("/")[1];
+  },
+  watch: {
+    // Watch for changes in route and update active tab accordingly
+    $route(to) {
+      this.activeTab = to.path.split("/")[1];
+    }
+  },
   methods: {
     changeTab(tab) {
       this.activeTab = tab;

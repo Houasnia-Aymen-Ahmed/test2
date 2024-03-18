@@ -6,7 +6,7 @@
           <header-back-btn @backClicked="goBack" />
           <PageTitle
             title="Notifications"
-            mt="20"
+            mt="2.4631"
             customClass="font-primaryBold text-left text-[25px] text-tertiary leading-[32.76px] font-normal"
           />
         </div>
@@ -20,14 +20,14 @@
               class="w-[92.533%] h-[12.931vh] shadow-primary-shadow p-0 rounded-[22px] overflow-hidden bg-white"
             >
               <div
-                class="flex flex-row items-center justify-start w-full h-[12.931vh] py-[24px]"
+                class="flex flex-row items-center justify-start w-full h-[12.931vh] py-[2.9557vh]"
               >
                 <ion-img
                   :src="item.image"
                   :alt="item.title"
-                  class="w-[60px] h-[60px] rounded-[10px]"
+                  class="w-[16.0000vw] h-[7.3892vh] rounded-[10px]"
                 />
-                <div class="flex flex-col ml-[21px] gap-[4px] w-[67.435%]">
+                <div class="flex flex-col ml-[5.6000vw] gap-[4px] w-[67.435%]">
                   <ion-text
                     class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px]"
                   >

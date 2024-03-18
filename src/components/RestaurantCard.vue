@@ -1,7 +1,7 @@
 <template>
   <div
     @click="redirectToProduct(restaurant)"
-    class="flex flex-col justify-end items-center w-full h-full pb-[26px] bg-white"
+    class="flex flex-col justify-end items-center w-full h-full pb-[3.2020vh] bg-white"
   >
     <ion-img :src="restaurant.image" class="image-container" />
     <ion-text

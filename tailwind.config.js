@@ -8,6 +8,7 @@ export default {
         patternMasked: 'url("@/assets/images/PatternMasked.png")',
         patternCta: 'url("@/assets/images/Pattern_cta.png")',
         resto: 'url("@/assets/images/bgTwo.png")',
+        profile: 'url("@/assets/images/bgOne.png")',
         "patternCta-opacity":
           'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("@/assets/images/Pattern_cta.png")',
 
@@ -45,7 +46,7 @@ export default {
       },
       boxShadow: {
         "primary-shadow": "12px 26px 50px 0px #5a6cea12",
-        "secondary-shadow": "0px 0px 50px 0px #5a6cea12",
+        "secondary-shadow": "0px 0px 50px 0px #5a6cea12"
       },
       fontFamily: {
         primarySans: ["BentonSansBook", "sans-serif"],
@@ -54,7 +55,8 @@ export default {
         primaryBlack: ["BentonSansBlack"],
         viga: ["viga"],
         inter: ["Inter", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"]
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["roboto"]
       }
     }
   },

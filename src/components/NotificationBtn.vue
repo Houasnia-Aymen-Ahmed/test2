@@ -1,12 +1,12 @@
 <template>
   <div
-    class="fixed top-[8.744vh] left-[77.6%] bg-[#FAFDFF] drop-shadow-notif w-[45px] h-[45px] rounded-[15px] mr-[51px] overflow-hidden z-[99]"
+    class="fixed top-[8.744vh] left-[77.6%] bg-[#FAFDFF] drop-shadow-notif w-[12.0000vw] h-[5.5419vh] rounded-[15px] mr-[13.6000vw] overflow-hidden z-[99]"
   >
     <div class="flex justify-center items-center h-full w-full">
       <ion-icon
         :icon="hasNotifications ? notification_icon_circle : notification_icon"
         @click="$router.push('/profile/notifications')"
-        class="w-[19px] h-[23px] self-center"
+        class="w-[5.0667vw] h-[2.8325vh] self-center"
       />
     </div>
   </div>

@@ -5,15 +5,15 @@
         <div class="w-full flex flex-col justify-start items-center">
           <NotificationBtn />
           <page-title title="Find your favorite food" />
-          <search-and-filter class="bg-transparent px-[25px] mt-[18px]" />
+          <search-and-filter class="bg-transparent px-[6.6667vw] mt-[2.2167vh]" />
         </div>
-        <div class="w-full mt-[25px]">
+        <div class="w-full mt-[3.0788vh]">
           <view-more-and-title
             route="restaurants"
             title="Popular Restaurants"
             btnTxt="View More!"
             :hideViewMore="true"
-            class="w-full flex flex-row justify-between px-[25px]"
+            class="w-full flex flex-row justify-between px-[6.6667vw]"
           />
           <div
             class="w-full flex flex-row items-center justify-around flex-wrap mt-[2.4631vh]"

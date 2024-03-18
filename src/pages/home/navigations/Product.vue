@@ -7,17 +7,18 @@
             v-if="resto"
             ref="modal"
             backdropDismiss="false"
+            showBackdrop="false"
             :is-open="isOpen"
             :initial-breakpoint="0.6465"
             :breakpoints="[0.5, 0.6465, 0.9384]"
           >
-            <div class="w-full sheet-modal overflow-y-scroll mt-[44.5px]">
+            <div class="w-full sheet-modal overflow-y-scroll mt-[5.4803vh]">
               <div
-                class="flex flex-row item-center w-full justify-between mb-[19.5px] px-[33px]"
+                class="flex flex-row item-center w-full justify-between mb-[2.4015vh] px-[8.8000vw]"
               >
                 <div
                   v-if="resto.isPopular"
-                  class="bg-green-gradient-100 rounded-[18.5px] h-[34px] w-[76px] self-center flex items-center justify-center m-0"
+                  class="bg-green-gradient-100 rounded-[18.5px] h-[4.1872vh] w-[20.2667vw] self-center flex items-center justify-center m-0"
                 >
                   <ion-text
                     class="text-transparent bg-green-gradient bg-clip-text font-primaryMedium text-left font-normal text-[12px] leading-[15.72px]"
@@ -29,30 +30,30 @@
                   class="justify-self-end flex flex-row justify-between gap-[10px]"
                 >
                   <div
-                    class="bg-green-gradient-100 rounded-[18.5px] h-[34px] w-[34px] flex items-center justify-center"
+                    class="bg-green-gradient-100 rounded-[18.5px] h-[4.1872vh] w-[9.0667vw] flex items-center justify-center"
                   >
                     <ion-icon
                       :icon="location_sharp"
-                      class="text-[#15BE77] w-[16px] h-[16px]"
+                      class="text-[#15BE77] w-[4.2667vw] h-[1.9704vh]"
                     />
                   </div>
                   <div
-                    class="bg-[#FF1D1D] bg-opacity-10 rounded-[18.5px] h-[34px] w-[34px] flex items-center justify-center"
+                    class="bg-[#FF1D1D] bg-opacity-10 rounded-[18.5px] h-[4.1872vh] w-[9.0667vw] flex items-center justify-center"
                   >
                     <ion-icon
                       :icon="heartSharp"
-                      class="text-[#FF1D1D] w-[16px] h-[16px]"
+                      class="text-[#FF1D1D] w-[4.2667vw] h-[1.9704vh]"
                     />
                   </div>
                 </div>
               </div>
               <ion-text
-                class="font-primaryBold text-left text-[27px] text-tertiary leading-[35.38px] font-normal px-[33px]"
+                class="font-primaryBold text-left text-[27px] text-tertiary leading-[35.38px] font-normal px-[8.8000vw]"
               >
                 {{ resto.name.replace(/\b\w/g, (char) => char.toUpperCase()) }}
               </ion-text>
               <div
-                class="flex flex-row item-center w-full justify-start gap-[2.4631vh] mt-[2.4631vh] px-[33px]"
+                class="flex flex-row item-center w-full justify-start gap-[2.4631vh] mt-[2.4631vh] px-[8.8000vw]"
               >
                 <div
                   class="flex flex-row justify-between items-center gap-[10px]"
@@ -81,7 +82,7 @@
                   </ion-text>
                 </div>
               </div>
-              <div class="px-[33px]">
+              <div class="px-[8.8000vw]">
                 <p
                   v-if="showLess"
                   @click="toggleDescription"
@@ -102,51 +103,57 @@
                   <span
                     v-if="showEllipsis"
                     @click="toggleDescription"
-                    class="ml-[10px] font-primaryBold cursor-pointer text-[15px] text-blue-500"
+                    class="ml-[2.6667vw] font-primaryBold cursor-pointer text-[15px] text-blue-500"
                   >
                     &#8629;
                   </span>
                 </p>
               </div>
-              <div class="w-full mt-[3.0788vh] px-[33px]">
+              <div class="w-full mt-[3.0788vh] px-[8.8000vw]">
                 <view-more-and-title
                   route="menu-items"
                   title="Popular Menu"
                   btnTxt="View All"
                   class="w-full flex flex-row justify-between"
                 />
-                <div
+                <swiper
                   id="restoMenu"
-                  class="mt-[2.4631vh] flex flex-row gap-[2.4631vh] items-center justify-start overflow-x-scroll scrollbar-hide"
+                  :direction="'horizontal'"
+                  :slidesPerView="'auto'"
+                  :freeMode="true"
+                  :scrollbar="false"
+                  :mousewheel="true"
+                  :modules="modules"
+                  class="mt-[2.4631vh] overflow-visible overflow-x-clip"
                 >
-                  <div
-                    v-for="item in resto.popularMenu"
-                    :key="item.id"
-                    class="min-w-[39.2vw] h-[21.059vh] shadow-primary-shadow rounded-[22px]"
-                  >
-                    <div
-                      class="flex flex-col justify-end items-center w-full h-full pb-[14px] bg-white"
+                  <template v-for="item in resto.popularMenu" :key="item.id">
+                    <swiper-slide
+                      class="min-w-[39.2vw] max-w-[39.3vw] h-[21.059vh] shadow-primary-shadow rounded-[22px] mx-[10px]"
                     >
-                      <ion-img :src="item.image" class="image-container" />
-                      <ion-text
-                        class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px] mt-[1.2315vh]"
+                      <div
+                        class="flex flex-col justify-end items-center w-full h-full pb-[1.7241vh] bg-white"
                       >
-                        {{ item.name }}
-                      </ion-text>
-                      <ion-text
-                        class="font-primarySans text-black text-opacity-50 text-left font-normal text-[13px] leading-[17.03px] mt-[0.9852vh]"
-                      >
-                        {{ item.price }}$
-                      </ion-text>
-                    </div>
-                  </div>
-                </div>
+                        <ion-img :src="item.image" class="image-container" />
+                        <ion-text
+                          class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px] mt-[1.2315vh]"
+                        >
+                          {{ item.name }}
+                        </ion-text>
+                        <ion-text
+                          class="font-primarySans text-black text-opacity-50 text-left font-normal text-[13px] leading-[17.03px] mt-[0.9852vh]"
+                        >
+                          {{ item.price }}$
+                        </ion-text>
+                      </div>
+                    </swiper-slide>
+                  </template>
+                </swiper>
               </div>
               <div class="w-full mt-[2.4631vh]">
                 <view-more-and-title
                   title="Testimontials"
                   :hideViewMore="false"
-                  class="w-full flex flex-row justify-between px-[33px]"
+                  class="w-full flex flex-row justify-between px-[8.8000vw]"
                 />
                 <ion-list
                   class="flex flex-col items-center gap-[2.4631vh] mt-[3.0788vh]"
@@ -163,11 +170,11 @@
                         <ion-img
                           :src="item.person.image"
                           :alt="item.person.name"
-                          class="w-[64px] h-[64px] rounded-[10px]"
+                          class="w-[17.0667vw] h-[7.8818vh] rounded-[10px]"
                         />
                       </div>
                       <div
-                        class="flex flex-col items-center justify-stretch ml-[21px] mr-[24px] gap-[2.4631vh] mt-[1.2315vh]"
+                        class="flex flex-col items-center justify-stretch ml-[5.6000vw] mr-[6.4000vw] gap-[2.4631vh] mt-[1.2315vh]"
                       >
                         <div class="flex flex-row justify-start w-full">
                           <div class="flex flex-col gap-[4px]">
@@ -186,11 +193,11 @@
                             class="flex-1 flex flex-row items-center justify-end"
                           >
                             <div
-                              class="bg-green-gradient-100 rounded-[18.5px] h-[33px] w-[53px] self-center flex items-center justify-center gap-[6.33px] m-0"
+                              class="bg-green-gradient-100 rounded-[18.5px] h-[4.0640vh] w-[14.1333vw] self-center flex items-center justify-center gap-[6.33px] m-0"
                             >
                               <ion-icon
                                 :icon="star"
-                                class="text-[#15BE77] w-[16px] h-[16px]"
+                                class="text-[#15BE77] w-[4.2667vw] h-[1.9704vh]"
                               />
                               <ion-text
                                 class="text-transparent bg-green-gradient bg-clip-text font-primaryBold text-left font-normal text-[16px] leading-[28.88px]"
@@ -210,7 +217,7 @@
                   </ion-item>
                 </ion-list>
               </div>
-              <div class="h-[430px] bg-transparent mt-auto" />
+              <div class="h-[52.9557vh] bg-transparent mt-auto" />
             </div>
           </ion-modal>
         </div>
@@ -224,6 +231,11 @@ import { ref } from "vue";
 import { heartSharp } from "ionicons/icons";
 import { ViewMoreAndTitle } from "@/components";
 import { restaurants } from "@/utils/constants";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/scrollbar";
 import {
   location_sharp,
   location_outline,
@@ -255,7 +267,9 @@ export default {
     IonItem,
     IonIcon,
     IonModal,
-    ViewMoreAndTitle
+    ViewMoreAndTitle,
+    Swiper,
+    SwiperSlide
   },
   data() {
     return {
@@ -292,8 +306,10 @@ export default {
       console.log("Home page will leave");
       isOpen.value = false;
     });
+
     return {
-      isOpen
+      isOpen,
+      modules: [FreeMode, Scrollbar, Mousewheel]
     };
   },
   computed: {

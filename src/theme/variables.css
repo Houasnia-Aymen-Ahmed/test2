@@ -1,7 +1,7 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@100..900&family=Poppins&family=Viga&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -342,6 +342,19 @@ html {
 }
  */
 
+ion-searchbar > div > input::placeholder {
+  @apply font-roboto text-[12px] leading-[14.06px] tracking-[0.5px];
+}
+
+ion-searchbar > div > input {
+  padding-inline-start: 61px !important ;
+}
+
+ion-searchbar > div > ion-icon {
+  inset-inline-start: 0px !important;
+  margin-inline-start: 18px !important;
+}
+
 ion-input.custom-input {
   background: #ffffff;
   color: #000;
@@ -354,10 +367,10 @@ ion-input.custom-input {
   --placeholder-color: theme("colors.placeHolderColor");
   --placeholder-opacity: 0.3;
 
-  --padding-bottom: 17px;
-  --padding-end: 20px;
-  --padding-start: 20px;
-  --padding-top: 17px;
+  --padding-bottom: 2.0936vh;
+  --padding-end: 5.3333px;
+  --padding-start: 5.3333px;
+  --padding-top: 2.0936vh;
 }
 
 ion-toolbar.custom-toolbar {
@@ -367,7 +380,7 @@ ion-toolbar.custom-toolbar {
   --border-width: 4px 0;
   --border-style: double;
 
-  --min-height: 80px;
+  --min-height: 9.8522vh;
   --padding-top: 4.68vh;
   --padding-start: 6.667%;
   --padding-end: 6.667%;

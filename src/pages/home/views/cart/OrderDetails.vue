@@ -6,7 +6,7 @@
           <header-back-btn @backClicked="goBack" />
           <PageTitle
             title="Order details"
-            mt="20"
+            mt="2.4631"
             customClass="font-primaryBold text-left text-[25px] text-tertiary leading-[32.76px] font-normal"
           />
           <ion-list
@@ -21,8 +21,11 @@
                 <div
                   class="flex flex-row items-center justify-start w-full h-[12.931vh]"
                 >
-                  <ion-img :src="order.image" class="min-w-[62px] h-[62px]" />
-                  <div class="flex flex-col flex-1 ml-[20px]">
+                  <ion-img
+                    :src="order.image"
+                    class="min-w-[16.5333vw] h-[7.6355vh]"
+                  />
+                  <div class="flex flex-col flex-1 ml-[5.3333vw]">
                     <ion-text
                       class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px]"
                     >
@@ -39,10 +42,12 @@
                       $ {{ order.price }}
                     </ion-text>
                   </div>
-                  <div class="flex flex-row items-center gap-[18px] mr-[11px]">
+                  <div
+                    class="flex flex-row items-center gap-[18px] mr-[2.9333vw]"
+                  >
                     <div
                       @click="decrementCount(order)"
-                      class="flex items-center justify-center rounded-[10px] w-[26px] h-[26px] bg-green-gradient-100"
+                      class="flex items-center justify-center rounded-[10px] w-[6.9333vw] h-[3.2020vh] bg-green-gradient-100"
                     >
                       <ion-icon :icon="removeOutline" class="green-text-icon" />
                     </div>
@@ -53,7 +58,7 @@
                     </ion-text>
                     <div
                       @click="incrementCount(order)"
-                      class="flex items-center justify-center rounded-[10px] w-[26px] h-[26px] bg-green-gradient text-white"
+                      class="flex items-center justify-center rounded-[10px] w-[6.9333vw] h-[3.2020vh] bg-green-gradient text-white"
                     >
                       <ion-icon :icon="addOutline" class="" />
                     </div>
@@ -62,14 +67,14 @@
               </ion-item>
               <ion-item-options side="end" @ionSwipe="onSwipe(index)">
                 <ion-item-option
-                  class="bg-primary-400 px-[16px]"
+                  class="bg-primary-400 px-[4.2667vw]"
                   expandable
                   @click="removeItem(index)"
                 >
                   <ion-icon
                     slot="icon-only"
                     size="small"
-                    class="w-[24px] h-[24px] p-0 m-0"
+                    class="w-[6.4000vw] h-[2.9557vh] p-0 m-0"
                     :icon="trash"
                   ></ion-icon>
                 </ion-item-option>
@@ -77,11 +82,11 @@
             </ion-item-sliding>
           </ion-list>
           <div
-            class="fixed bottom-[16px] bg-green-gradient shadow-none bg-transparent m-0 w-[92.2667%] h-[25.369vh] mt-[2.4631vh] rounded-[22px]"
+            class="fixed bottom-[1.9704vh] bg-green-gradient shadow-none bg-transparent m-0 w-[92.2667%] h-[25.369vh] mt-[2.4631vh] rounded-[22px]"
           >
             <div class="flex flex-col pattern-bg-card w-full h-full">
               <div
-                class="flex flex-col justify-between flex-1 px-[29px] pt-[2.4631vh] pb-[22px] gap-[7px]"
+                class="flex flex-col justify-between flex-1 px-[7.7333vw] pt-[2.4631vh] pb-[2.7094vh] gap-[7px]"
               >
                 <div class="flex flex-col gap-[7px]">
                   <ion-text
@@ -109,7 +114,8 @@
                 </ion-text>
               </div>
               <ion-button
-                class="bg-white rounded-[15px] mb-[12px] h-[7.019vh] w-[93.937%] self-center flex items-center justify-center m-0"
+                class="bg-white rounded-[15px] mb-[1.4778vh] h-[7.019vh] w-[93.937%] self-center flex items-center justify-center m-0"
+                @click="placeOrder()"
               >
                 <ion-text
                   class="text-transparent bg-green-gradient bg-clip-text font-primaryBold text-left font-normal text-[14px] leading-[14.14px] tracking-[0.5px]"
@@ -215,7 +221,7 @@ export default {
   },
   methods: {
     goBack() {
-      this.$router.push("/home");
+      this.$router.go(-1);
     },
     incrementCount(order) {
       order.count++;
@@ -230,6 +236,9 @@ export default {
     },
     onSwipe(index) {
       this.orders.splice(index, 1);
+    }, 
+    placeOrder() {
+      this.$router.push("/checkout-order");
     }
   }
 };

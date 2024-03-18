@@ -1,9 +1,10 @@
 <template>
   <ion-header class="bg-transparent ion-no-border">
-    <ion-toolbar
-      class="flex flex-row justify-center items-center bg-transparent custom-toolbar"
-    >
-      <div class="bg-white w-[45px] h-[45px]" @click="handleBack">
+    <ion-toolbar :class="customClass">
+      <div
+        class="bg-white w-[12.0000vw] h-[5.5419vh] rounded-[15px]"
+        @click="handleBack"
+      >
         <div
           class="w-full h-full bg-[#F9A84D] bg-opacity-10 rounded-[15px] flex flex-row justify-center items-center"
         >
@@ -23,7 +24,12 @@ import { chevronBackOutline } from "ionicons/icons";
 
 export default {
   props: {
-    icon: String
+    icon: String,
+    customClass: {
+      type: String,
+      default:
+        "flex flex-row justify-center items-center bg-transparent custom-toolbar"
+    }
   },
   components: {
     IonHeader,

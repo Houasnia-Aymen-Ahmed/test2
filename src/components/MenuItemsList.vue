@@ -9,9 +9,9 @@
         <ion-img
           :src="item.image"
           :alt="item.name"
-          class="w-[64px] h-[64px] rounded-[10px]"
+          class="w-[17.0667vw] h-[7.8818vh] rounded-[10px]"
         />
-        <div class="flex flex-col ml-[21px] gap-[4px]">
+        <div class="flex flex-col ml-[5.6000vw] gap-[4px]">
           <ion-text
             class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px]"
           >
@@ -24,7 +24,7 @@
           </ion-text>
         </div>
         <ion-text
-          class="absolute right-[20px] font-primaryBold text-[#FEAD1D] text-left font-normal text-[22px] leading-[28.83px]"
+          class="absolute right-[5.3333vw] font-primaryBold text-[#FEAD1D] text-left font-normal text-[22px] leading-[28.83px]"
         >
           ${{ item.price }}
         </ion-text>

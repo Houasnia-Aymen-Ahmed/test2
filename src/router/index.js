@@ -8,7 +8,7 @@ import {
   Profile,
   Cart,
   Chat,
-  CheckoutOrder
+  CheckoutWrapper
 } from "@/pages/home/views";
 
 const routes = [
@@ -77,7 +77,20 @@ const routes = [
   {
     path: "/checkout-order",
     name: "CheckoutOrder",
-    component: CheckoutOrder
+    component: CheckoutWrapper,
+    children: [
+      // {
+      //   path: "",
+      //   name: "CheckoutOrder",
+      //   component: CheckoutOrder
+      // },
+      // {
+      //  path: "/checkout-order/map",
+      //  name: "CheckoutOrderMap",
+      //  component: () =>
+      //  import("@/pages/home/views/checkout_order/CheckoutMap.vue")
+      // },
+    ]
   },
   {
     path: "/checkout-order/map",

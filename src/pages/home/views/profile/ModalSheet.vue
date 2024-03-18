@@ -1,7 +1,7 @@
 <template>
-  <div class="mr-[33px] ml-[20px] w-full overflow-y-auto mt-[44.5px]">
+  <div class="w-full overflow-y-auto mt-[5.4803vh]">
     <div
-      class="bg-[#FEAD1D] bg-opacity-10 rounded-[18.5px] h-[34px] w-[111px] flex items-center justify-center mb-[19.5px] px-[10px]"
+      class="bg-[#FEAD1D] bg-opacity-10 rounded-[18.5px] h-[4.1872vh] w-[29.6000vw] flex items-center justify-center mb-[2.4015vh] px-[2.6667vw] ml-[5.3333vw]"
     >
       <ion-text
         v-if="user.isGoldMember"
@@ -10,23 +10,26 @@
         Member Gold
       </ion-text>
     </div>
-    <div class="flex flex-row justify-between items-center">
+    <div class="flex flex-row justify-between items-center ml-[5.3333vw]">
       <ion-text
         class="font-primaryBold text-left text-[27px] text-tertiary leading-[35.38px] font-normal"
       >
         {{ user.name.replace(/\b\w/g, (char) => char.toUpperCase()) }}
       </ion-text>
-      <ion-icon :icon="icons.edit" class="w-[24px] h-[24px]" />
+      <ion-icon
+        :icon="icons.edit"
+        class="w-[6.4000vw] h-[2.9557vh] mr-[8.5333vw]"
+      />
     </div>
     <ion-text
-      class="font-primarySans text-left text-[14px] tracking-[0.5px] text-[#3B3B3B] text-opacity-30 leading-[21px] font-normal mt-[0.4926vh]"
+      class="font-primarySans text-left text-[14px] tracking-[0.5px] text-[#3B3B3B] text-opacity-30 leading-[21px] font-normal mt-[0.4926vh] ml-[5.3333vw]"
     >
       {{ user.email }}
     </ion-text>
     <div
-      class="w-[92.533vw] h-[7.881vh] mt-[2.4631vh] rounded-[22px] px-[20px] py-[13px] flex flex-row items-center justify-start gap-[16px] shadow-primary-shadow"
+      class="w-[92.533vw] h-[7.881vh] mt-[2.4631vh] rounded-[22px] mx-[3.7333vw] px-[5.3333vw] py-[1.6010vh] flex flex-row items-center justify-start gap-[16px] shadow-primary-shadow"
     >
-      <ion-icon :icon="icons.voucher" class="w-[46px] h-[46px]" />
+      <ion-icon :icon="icons.voucher" class="w-[12.2667vw] h-[5.6650vh]" />
       <ion-text
         class="font-primarySans text-left text-[14px] tracking-[0.5px] text-[#3B3B3B] text-opacity-30 leading-[21px] font-normal mt-[0.4926vh]"
       >
@@ -36,15 +39,15 @@
     <view-more-and-title
       title="Favorite"
       :hideViewMore="false"
-      class="w-full flex flex-row justify-between mt-[2.4631vh] pl-[13px]"
+      class="w-full flex flex-row justify-between mt-[2.4631vh] pl-[5.3333vw]"
     />
     <div
       v-for="item in favorite"
       :key="item.id"
-      class="flex flex-row w-full items-center h-[12.931vh] bg-white shadow-primary-shadow px-[22px] rounded-[22px] mt-[2.4631vh]"
+      class="flex flex-row items-center h-[12.931vh] bg-white shadow-primary-shadow px-[5.8667vw] rounded-[22px] mt-[2.4631vh] mx-[3.7333vw]"
     >
-      <ion-img :src="item.image" class="min-w-[62px] h-[62px]" />
-      <div class="flex flex-col flex-1 ml-[20px]">
+      <ion-img :src="item.image" class="min-w-[16.5333vw] h-[7.6355vh]" />
+      <div class="flex flex-col flex-1 ml-[5.3333vw]">
         <ion-text
           class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px]"
         >
@@ -64,7 +67,7 @@
 
       <div
         @click="buyAgain(item.id)"
-        class="flex items-center justify-center rounded-[10px] bg-green-gradient text-white px-[11px] py-[9px] w-[85px] h-[24px]"
+        class="flex items-center justify-center rounded-[10px] bg-green-gradient text-white px-[2.9333vw] py-[1.1084vh] w-[22.6667vw] h-[2.9557vh]"
       >
         <ion-text
           class="font-primaryMedium text-white text-left font-normal text-[12px] leading-[12.12px] tracking-[0px]"
@@ -73,7 +76,7 @@
         </ion-text>
       </div>
     </div>
-    <div class="h-[500px] bg-transparent mt-auto" />
+    <div class="h-[61.5764vh] bg-transparent mt-auto" />
   </div>
 </template>
 

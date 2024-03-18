@@ -3,7 +3,7 @@
     <ion-content class="h-full">
       <div class="bg-cover bg-patternMasked h-full">
         <div class="flex flex-col items-center justify-start w-full h-full">
-          <PageTitle
+          <page-title
             title="Chat"
             customClass="font-primaryBold text-left text-[25px] text-tertiary leading-[32.76px] font-normal"
           />
@@ -83,9 +83,6 @@ export default {
     redirectToChatItem(item) {
       this.$router.push({ name: "ChatItem", params: { id: item.id } });
     },
-    goBack() {
-      this.$router.push("/home");
-    }
   }
 };
 </script>

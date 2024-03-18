@@ -1,17 +1,17 @@
 <template>
   <div class="w-full flex flex-row items-center">
-    <div class="h-[50px] flex-1 flex items-center">
+    <div class="h-[6.1576vh] flex-1 flex items-center">
       <ion-searchbar
-        class="custom w-full h-[50px] p-0"
-        placeholder="What do you want to order?"
+        class="custom w-full h-[6.1576vh] p-0"
+        :placeholder="placeHolder"
         showCancelButton="never"
       />
     </div>
     <div
       v-if="showFilter"
-      class="w-[49px] h-[50px] ml-[9px] rounded-[15px] bg-[#F9A84D] bg-opacity-10 flex justify-center items-center"
+      class="w-[13.0667vw] h-[6.1576vh] ml-[2.4000vw] rounded-[15px] bg-[#F9A84D] bg-opacity-10 flex justify-center items-center"
     >
-      <ion-icon :icon="filter" class="w-[2.4631vh] h-[17.78px] self-center" />
+      <ion-icon :icon="filter" class="w-[2.4631vh] h-[2.1897vh] self-center" />
     </div>
   </div>
 </template>
@@ -25,6 +25,10 @@ export default {
     showFilter: {
       type: Boolean,
       default: true
+    },
+    placeHolder: {
+      type: String,
+      default: "What do you want to order?"
     }
   },
   components: {

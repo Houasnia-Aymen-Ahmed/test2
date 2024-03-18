@@ -3,9 +3,12 @@
     <ion-content :fullscreen="true" class="h-full">
       <div class="bg-cover bg-patternMasked h-full">
         <div class="w-full flex flex-col justify-start items-center h-full">
+          <header-back-btn @backClicked="moveToPrevSlide" />
           <notification-btn />
-          <page-title title="Find your favorite food" />
-          <search-and-filter class="bg-transparent px-[25px] mt-[2.2167vh]" />
+          <page-title title="Find your favorite food" mt="2.4631" />
+          <search-and-filter
+            class="bg-transparent px-[6.6667vw] mt-[2.2167vh]"
+          />
           <div class="w-full mt-[3.0788vh]">
             <ion-list
               class="flex flex-col items-center gap-[2.4631vh] mt-[3.0788vh]"
@@ -19,8 +22,11 @@
                 <div
                   class="flex flex-row items-center justify-start w-full h-[12.931vh]"
                 >
-                  <ion-img :src="order.image" class="min-w-[62px] h-[62px]" />
-                  <div class="flex flex-col flex-1 ml-[20px]">
+                  <ion-img
+                    :src="order.image"
+                    class="min-w-[16.5333vw] h-[7.6355vh]"
+                  />
+                  <div class="flex flex-col flex-1 ml-[5.3333vw]">
                     <ion-text
                       class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px]"
                     >
@@ -38,19 +44,21 @@
                     </ion-text>
                   </div>
                   <div
-                    class="self-center flex flex-row items-center justify-center rounded-[17.5px] bg-green-gradientpy-[9px] px-[11px]"
+                    class="self-center flex flex-row items-center justify-center rounded-[17.5px] bg-green-gradientpy-[1.1084vh] px-[2.9333vw]"
                   >
                     <ion-text
-                      class="leading-[12.12px] text-[12px] font-primaryMedium text-white tracking-[0.5px] flex flex-row items-center justify-center rounded-[17.5px] bg-green-gradient py-[9px] px-[11px]"
+                      class="leading-[12.12px] text-[12px] font-primaryMedium text-white tracking-[0.5px] flex flex-row items-center justify-center rounded-[17.5px] bg-green-gradient py-[1.1084vh] px-[2.9333vw]"
                       >Proccess
                     </ion-text>
                   </div>
                 </div>
               </ion-item>
             </ion-list>
+            <div class="h-[12vh]"></div>
           </div>
           <ion-button
-            class="bg-green-gradient rounded-[15px] fixed bottom-[32px] h-[7.019vh] w-[86.667%] self-center flex items-center justify-center m-0"
+            class="bg-green-gradient rounded-[15px] fixed bottom-[3.9409vh] h-[7.019vh] w-[86.667%] self-center flex items-center justify-center m-0"
+            @click="moveToNextSlide"
           >
             <ion-text
               class="text-white font-primaryBold text-left font-normal text-[14px] leading-[14.14px] tracking-[0.5px]"
@@ -65,8 +73,21 @@
 </template>
 
 <script>
-import { IonPage, IonContent } from "@ionic/vue";
-import { NotificationBtn, PageTitle, SearchAndFilter } from "@/components";
+import {
+  NotificationBtn,
+  PageTitle,
+  SearchAndFilter,
+  HeaderBackBtn
+} from "@/components";
+import {
+  IonPage,
+  IonContent,
+  IonList,
+  IonItem,
+  IonImg,
+  IonText,
+  IonButton
+} from "@ionic/vue";
 import {
   SpacyFreshCrab1,
   SpacyFreshCrab2,
@@ -76,9 +97,15 @@ export default {
   components: {
     IonPage,
     IonContent,
+    IonList,
+    IonItem,
+    IonImg,
+    IonText,
+    IonButton,
     NotificationBtn,
     PageTitle,
-    SearchAndFilter
+    SearchAndFilter,
+    HeaderBackBtn
   },
   data() {
     return {
@@ -124,6 +151,14 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    moveToNextSlide() {
+      this.$emit("moveToNextSlide");
+    },
+    moveToPrevSlide() {
+      this.$emit("moveToPrevSlide");
+    }
   }
 };
 </script>

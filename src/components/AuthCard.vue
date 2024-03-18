@@ -1,6 +1,6 @@
 <template>
   <div
-    class="shadow-none w-[50.7653%] h-[24.7536vh] mt-[6.03448vh] mb-[65px] mx-0 p-0 bg-transparent flex flex-col items-center justify-center"
+    class="shadow-none w-[50.7653%] h-[24.7536vh] mt-[6.03448vh] mb-[8.0049vh] mx-0 p-0 bg-transparent flex flex-col items-center justify-center"
   >
     <ion-img
       :src="Logo"
@@ -19,7 +19,7 @@
     </ion-text>
   </div>
   <ion-text
-    class="font-primaryBold text-center text-[20px] mb-[40px] leading-[26.2px] font-normal text-black"
+    class="font-primaryBold text-center text-[20px] mb-[4.9261vh] leading-[26.2px] font-normal text-black"
   >
     {{ title }}
   </ion-text>

@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { IonImg } from "@ionic/vue";
+import { IonImg, IonText } from "@ionic/vue";
 import PrimaryBtn from "@/components/PrimaryBtn.vue";
 
 export default {
@@ -42,6 +42,7 @@ export default {
     index: Number
   },
   components: {
+    IonText,
     IonImg,
     PrimaryBtn
   },

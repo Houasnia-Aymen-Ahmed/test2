@@ -6,22 +6,22 @@
           <header-back-btn @backClicked="goBack" />
           <PageTitle
             title="Chat"
-            mt="20"
+            mt="2.4631"
             customClass="font-primaryBold text-left text-[25px] text-tertiary leading-[32.76px] font-normal"
           />
           <div
             v-if="chatItem"
-            class="flex flex-row items-center justify-between px-[13px] w-[92.533vw] h-[11.453vh] shadow-primary-shadow p-0 rounded-[22px] bg-white mt-[25px]"
+            class="flex flex-row items-center justify-between px-[3.4667vw] w-[92.533vw] h-[11.453vh] shadow-primary-shadow p-0 rounded-[22px] bg-white mt-[3.0788vh]"
           >
             <ion-img
               :src="chatItem.image"
               :alt="chatItem.name"
-              class="w-[62px] h-[62px] rounded-[10px]"
+              class="w-[16.5333vw] h-[7.6355vh] rounded-[10px]"
             />
             <div
-              class="flex flex-1 flex-row justify-between items-center pr-[15px]"
+              class="flex flex-1 flex-row justify-between items-center pr-[4.0000vw]"
             >
-              <div class="flex flex-col ml-[21px] gap-[8px]">
+              <div class="flex flex-col ml-[5.6000vw] gap-[8px]">
                 <ion-text
                   class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px]"
                 >
@@ -29,7 +29,7 @@
                 </ion-text>
                 <div class="flex flex-row items-center gap-[4px]">
                   <div
-                    :class="`w-[6px] h-[6px] rounded-full inline-block ${
+                    :class="`w-[1.6000vw] h-[0.7389vh] rounded-full inline-block ${
                       chatItem.isActive
                         ? 'bg-green-gradient'
                         : 'bg-[#3B3B3B] bg-opacity-30'
@@ -43,17 +43,17 @@
                 </div>
               </div>
               <div
-                class="justify-self-end flex items-center justify-center bg-green-gradient-100 w-[40px] h-[40px] rounded-full"
+                class="justify-self-end flex items-center justify-center bg-green-gradient-100 w-[10.6667vw] h-[4.9261vh] rounded-full"
               >
                 <ion-icon :icon="call" />
               </div>
             </div>
           </div>
-          <div class="w-full px-5 mt-[40px]">
+          <div class="w-full px-5 mt-[4.9261vh]">
             <div
               v-for="message in filteredMessages"
               :key="message.time"
-              class="grid mb-[20px]"
+              class="grid mb-[2.4631vh]"
             >
               <div
                 :class="`rounded-[13px] py-2 px-4 max-w-max text-opacity-80 ${
@@ -72,11 +72,11 @@
           <div class="fixed bottom-2.5 w-full px-2.5">
             <ion-input
               v-model="inputMessage"
-              class="shadow-secondary-shadow !flex flex-row items-center justify-center rounded-[22px] bg-white h-[74px]"
+              class="shadow-secondary-shadow !flex flex-row items-center justify-center rounded-[22px] bg-white h-[9.1133vh]"
               ><ion-icon
                 :icon="send"
                 @click="sendMessage"
-                class="absolute right-[37px] w-[24px] h-[24px] block z-[10]"
+                class="absolute right-[9.8667vw] w-[6.4000vw] h-[2.9557vh] block z-[10]"
             /></ion-input>
           </div>
         </div>
@@ -171,11 +171,11 @@ export default {
 <style>
 ion-input.input-label-placement-start.sc-ion-input-ios-h
   .input-wrapper.sc-ion-input-ios {
-  @apply py-[0] px-[25px];
+  @apply py-[0] px-[6.6667vw];
 }
 
 .offset::before {
   content: "";
-  @apply absolute top-0 left-0 w-full h-[100px];
+  @apply absolute top-0 left-0 w-full h-[12.3153vh];
 }
 </style>
