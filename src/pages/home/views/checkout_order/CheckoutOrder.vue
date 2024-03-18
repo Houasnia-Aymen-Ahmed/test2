@@ -5,9 +5,11 @@
         <div class="w-full flex flex-col justify-start items-center h-full">
           <notification-btn />
           <page-title title="Find your favorite food" />
-          <search-and-filter class="bg-transparent px-[25px] mt-[18px]" />
-          <div class="w-full mt-[25px]">
-            <ion-list class="flex flex-col items-center gap-[20px] mt-[25px]">
+          <search-and-filter class="bg-transparent px-[25px] mt-[2.2167vh]" />
+          <div class="w-full mt-[3.0788vh]">
+            <ion-list
+              class="flex flex-col items-center gap-[2.4631vh] mt-[3.0788vh]"
+            >
               <ion-item
                 v-for="order in OrdersInProccess"
                 :key="order.id"
@@ -25,12 +27,12 @@
                       {{ order.name }}
                     </ion-text>
                     <ion-text
-                      class="font-primarySans text-[#3B3B3B] text-opacity-30 text-left font-normal text-[14px] leading-[19.65px] tracking-[0.5px] mt-[4px]"
+                      class="font-primarySans text-[#3B3B3B] text-opacity-30 text-left font-normal text-[14px] leading-[19.65px] tracking-[0.5px] mt-[0.4926vh]"
                     >
                       {{ order.description }}
                     </ion-text>
                     <ion-text
-                      class="leading-[24.89px] text-[19px] bg-green-gradient text-transparent bg-clip-text font-primaryBold mt-[8px]"
+                      class="leading-[24.89px] text-[19px] bg-green-gradient text-transparent bg-clip-text font-primaryBold mt-[0.9852vh]"
                     >
                       $ {{ order.price }}
                     </ion-text>

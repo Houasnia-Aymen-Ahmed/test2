@@ -8,7 +8,7 @@
       </ion-card-title>
     </ion-card-header>
     <ion-card-content
-      class="font-primarySans text-left text-[12px] text-black leading-[21.66px] font-normal mt-[20px] p-0 pr-[25px]"
+      class="font-primarySans text-left text-[12px] text-black leading-[21.66px] font-normal mt-[2.4631vh] p-0 pr-[25px]"
     >
       {{ content }}
     </ion-card-content>

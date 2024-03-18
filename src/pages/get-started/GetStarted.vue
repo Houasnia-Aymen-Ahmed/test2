@@ -8,6 +8,7 @@
               :image="s.image"
               :title="s.title"
               :content="s.content"
+              :index="s.id"
               @moveToNextSlide="moveToNextSlide"
             />
           </swiper-slide>

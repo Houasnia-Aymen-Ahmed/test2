@@ -5,7 +5,7 @@
         <div class="w-full flex flex-col justify-start items-center">
           <NotificationBtn />
           <page-title title="Find your favorite food" />
-          <search-and-filter class="bg-transparent px-[25px] mt-[18px]" />
+          <search-and-filter class="bg-transparent px-[25px] mt-[2.2167vh]" />
         </div>
         <div v-if="show" class="">
           <div
@@ -14,7 +14,7 @@
             @click="toggleFilter(filter)"
           ></div>
         </div>
-        <div class="w-full mt-[25px]">
+        <div class="w-full mt-[3.0788vh]">
           <view-more-and-title
             route="menu-items"
             title="Popular Menu"

@@ -4,12 +4,12 @@
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar
         slot="bottom"
-        class="px-[20px] h-[74px] rounded-[22px] m-4 bg-white shadow-primary-shadow flex justify-between border-0"
+        class="px-[5.3333vw] h-[9.1133vh] rounded-[22px] mx-[4.2667vw] my-[1.9704vh] bg-white shadow-primary-shadow flex justify-between border-0"
       >
         <ion-tab-button
           v-for="tab in tabs"
           :key="tab.key"
-          class="bg-white w-[105px] h-[44px] flex items-center"
+          class="bg-white w-[28vw] h-[5.4187vh] flex items-center"
           :tab="tab.key"
           :href="tab.href"
           @click="changeTab(tab.key)"
@@ -17,7 +17,7 @@
           <div
             :class="`flex flex-row items-center justify-center gap-[12px] rounded-[12px] ${
               activeTab === tab.key
-                ? 'bg-green-gradient-100 px-[17px] py-[10px]'
+                ? 'bg-green-gradient-100 px-[4.5333vw] py-[1.2315vh]'
                 : ''
             } `"
           >
@@ -26,14 +26,14 @@
                 :icon="tab.icon"
                 :class="`${
                   activeTab === tab.key
-                    ? 'opacity-100 w-[24px] h-[24px]  '
-                    : 'opacity-50 w-[20px] h-[20px] '
+                    ? 'opacity-100 w-[6.4000vw] h-[2.9557vh]  '
+                    : 'opacity-50 w-[5.3333vw] h-[2.4631vh] '
                 }`"
               />
               <ion-badge
                 v-if="tab.notif > 0"
                 color="danger"
-                class="absolute right-1 top-1 p-0 w-[13px] h-[13px] rounded-full"
+                class="absolute right-1 top-1 p-0 w-[3.4667vw] h-[1.6010vh] rounded-full"
               >
                 <span
                   class="flex items-center justify-center rounded-full p-0 font-thin text-[9px] leading-[11.79px]"
@@ -92,12 +92,13 @@ export default {
         { key: "cart", icon: buy, label: "Cart", href: "/cart", notif: 11 },
         { key: "chat", icon: chat, label: "Chat", href: "/chat", notif: 4 }
       ],
-      activeTab: "home"
+      activeTab: localStorage.getItem("activeTab") || "home"
     };
   },
   methods: {
     changeTab(tab) {
       this.activeTab = tab;
+      localStorage.setItem("activeTab", tab);
     }
   }
 };

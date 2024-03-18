@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center justify-start w-full h-full">
       <header-back-btn @backClicked="moveToPrevSlide" />
       <div
-        class="w-full flex flex-col items-start justify-center px-[25px] mt-[20px]"
+        class="w-full flex flex-col items-start justify-center px-[6.6667vw] mt-[2.4631vh]"
       >
         <CardComp
           title="Upload Your Photo Profile"
@@ -12,11 +12,11 @@
 
         <div
           v-if="imagePreview"
-          class="self-center mt-[60px] shadow-secondary-shadow w-[76.8%] h-[29.3103vh] rounded-[22px] overflow-hidden"
+          class="relative self-center mt-[7.3892vh] shadow-secondary-shadow w-[76.8%] h-[29.3103vh] rounded-[22px] overflow-hidden"
         >
           <div
             @click="clearImage"
-            class="absolute top-[10px] right-[10px] w-[31px] h-[31px] rounded-full bg-white bg-opacity-50 m-0 flex items-center justify-center"
+            class="absolute top-[1.2315vh] right-[2.6667vw] w-[8.2667vw] h-[3.8177vh] rounded-full bg-white bg-opacity-50 m-0 flex items-center justify-center"
           >
             <ion-icon :icon="closeOutline" class="text-white" size="small" />
           </div>
@@ -28,7 +28,7 @@
         </div>
         <div
           v-else
-          class="self-center w-full flex flex-col items-center justify-center gap-[20px] mt-[20px]"
+          class="self-center w-full flex flex-col items-center justify-center gap-[2.4631vh] mt-[2.4631vh]"
         >
           <ProfilePicUploader
             :image="gallery"

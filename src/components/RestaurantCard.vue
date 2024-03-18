@@ -5,12 +5,12 @@
   >
     <ion-img :src="restaurant.image" class="image-container" />
     <ion-text
-      class="font-primaryBold text-black text-left font-normal text-[16px] leading-[20.96px] mt-[4px]"
+      class="font-primaryBold text-black text-left font-normal text-[16px] leading-[20.96px] mt-[0.4926vh]"
     >
       {{ restaurant.name }}
     </ion-text>
     <ion-text
-      class="font-primarySans text-black text-opacity-50 text-left font-normal text-[13px] leading-[17.03px] mt-[4px]"
+      class="font-primarySans text-black text-opacity-50 text-left font-normal text-[13px] leading-[17.03px] mt-[0.4926vh]"
     >
       {{ restaurant.time }} Mins
     </ion-text>

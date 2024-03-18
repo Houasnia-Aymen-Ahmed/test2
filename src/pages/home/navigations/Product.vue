@@ -1,13 +1,13 @@
 <template>
   <ion-page class="w-full h-screen">
-    <ion-content class="h-full">
+    <ion-content class="">
       <div class="bg-contain bg-no-repeat bg-resto h-full">
         <div class="flex flex-col items-center justify-start w-full h-full">
           <ion-modal
             v-if="resto"
             ref="modal"
             backdropDismiss="false"
-            :is-open="true"
+            :is-open="isOpen"
             :initial-breakpoint="0.6465"
             :breakpoints="[0.5, 0.6465, 0.9384]"
           >
@@ -52,14 +52,14 @@
                 {{ resto.name.replace(/\b\w/g, (char) => char.toUpperCase()) }}
               </ion-text>
               <div
-                class="flex flex-row item-center w-full justify-start gap-[20px] mt-[20px] px-[33px]"
+                class="flex flex-row item-center w-full justify-start gap-[2.4631vh] mt-[2.4631vh] px-[33px]"
               >
                 <div
                   class="flex flex-row justify-between items-center gap-[10px]"
                 >
                   <ion-icon
                     :icon="location_outline"
-                    class="text-[#15BE77] w-[20px] h-[20px]"
+                    class="text-[#15BE77] w-[2.4631vh] h-[2.4631vh]"
                   />
                   <ion-text
                     class="text-[#3B3B3B] text-opacity-30 font-primarySans ans text-left font-normal text-[14px] leading-[14.14px]"
@@ -72,7 +72,7 @@
                 >
                   <ion-icon
                     :icon="half_star"
-                    class="text-[#15BE77] w-[20px] h-[20px]"
+                    class="text-[#15BE77] w-[2.4631vh] h-[2.4631vh]"
                   />
                   <ion-text
                     class="text-[#3B3B3B] text-opacity-30 font-primarySans text-left font-normal text-[14px] leading-[14.14px]"
@@ -91,8 +91,8 @@
                   <span
                     class="font-primaryBold cursor-pointer text-[15px] text-blue-500 tracking-widest"
                   >
-                    ...</span
-                  >
+                    ...
+                  </span>
                 </p>
                 <p
                   v-else
@@ -103,11 +103,12 @@
                     v-if="showEllipsis"
                     @click="toggleDescription"
                     class="ml-[10px] font-primaryBold cursor-pointer text-[15px] text-blue-500"
-                    >&#8629;</span
                   >
+                    &#8629;
+                  </span>
                 </p>
               </div>
-              <div class="w-full mt-[25px] px-[33px]">
+              <div class="w-full mt-[3.0788vh] px-[33px]">
                 <view-more-and-title
                   route="menu-items"
                   title="Popular Menu"
@@ -116,7 +117,7 @@
                 />
                 <div
                   id="restoMenu"
-                  class="mt-[20px] flex flex-row gap-[20px] items-center justify-start overflow-x-scroll scrollbar-hide"
+                  class="mt-[2.4631vh] flex flex-row gap-[2.4631vh] items-center justify-start overflow-x-scroll scrollbar-hide"
                 >
                   <div
                     v-for="item in resto.popularMenu"
@@ -128,12 +129,12 @@
                     >
                       <ion-img :src="item.image" class="image-container" />
                       <ion-text
-                        class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px] mt-[10px]"
+                        class="font-primaryMedium text-tertiary text-left font-normal text-[15px] leading-[19.65px] mt-[1.2315vh]"
                       >
                         {{ item.name }}
                       </ion-text>
                       <ion-text
-                        class="font-primarySans text-black text-opacity-50 text-left font-normal text-[13px] leading-[17.03px] mt-[8px]"
+                        class="font-primarySans text-black text-opacity-50 text-left font-normal text-[13px] leading-[17.03px] mt-[0.9852vh]"
                       >
                         {{ item.price }}$
                       </ion-text>
@@ -141,24 +142,24 @@
                   </div>
                 </div>
               </div>
-              <div class="w-full mt-[20px]">
+              <div class="w-full mt-[2.4631vh]">
                 <view-more-and-title
                   title="Testimontials"
                   :hideViewMore="false"
                   class="w-full flex flex-row justify-between px-[33px]"
                 />
                 <ion-list
-                  class="flex flex-col items-center gap-[20px] mt-[25px]"
+                  class="flex flex-col items-center gap-[2.4631vh] mt-[3.0788vh]"
                 >
                   <ion-item
-                    v-for="(item, index) in resto.testimontials"
+                    v-for="(item, index) in menu"
                     :key="index"
                     class="w-[89.6vw] h-[15.76vh] shadow-primary-shadow p-0 rounded-[22px] overflow-hidden bg-white"
                   >
                     <div
                       class="flex flex-row items-center justify-start w-full"
                     >
-                      <div class="self-start mt-[10px]">
+                      <div class="self-start mt-[1.2315vh]">
                         <ion-img
                           :src="item.person.image"
                           :alt="item.person.name"
@@ -166,7 +167,7 @@
                         />
                       </div>
                       <div
-                        class="flex flex-col items-center justify-stretch ml-[21px] mr-[24px] gap-[20px] mt-[10px]"
+                        class="flex flex-col items-center justify-stretch ml-[21px] mr-[24px] gap-[2.4631vh] mt-[1.2315vh]"
                       >
                         <div class="flex flex-row justify-start w-full">
                           <div class="flex flex-col gap-[4px]">
@@ -209,6 +210,7 @@
                   </ion-item>
                 </ion-list>
               </div>
+              <div class="h-[430px] bg-transparent mt-auto" />
             </div>
           </ion-modal>
         </div>
@@ -218,14 +220,16 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { heartSharp } from "ionicons/icons";
+import { ViewMoreAndTitle } from "@/components";
+import { restaurants } from "@/utils/constants";
 import {
   location_sharp,
   location_outline,
   half_star,
   star
 } from "@/assets/icons";
-import { ViewMoreAndTitle } from "@/components";
-import { restaurants } from "@/utils/constants";
 import {
   IonContent,
   IonPage,
@@ -234,9 +238,12 @@ import {
   IonIcon,
   IonList,
   IonItem,
-  IonModal
+  IonModal,
+  onIonViewDidEnter,
+  onIonViewDidLeave,
+  onIonViewWillEnter,
+  onIonViewWillLeave
 } from "@ionic/vue";
-import { heartSharp } from "ionicons/icons";
 
 export default {
   components: {
@@ -254,14 +261,39 @@ export default {
     return {
       itemId: null,
       resto: null,
-      inputMessage: "",
       location_outline,
       location_sharp,
       heartSharp,
       half_star,
       star,
+      menu: null,
       dragging: false,
       showLess: true
+    };
+  },
+  setup() {
+    const isOpen = ref(false);
+    onIonViewDidEnter(() => {
+      console.log("Home page did enter");
+      isOpen.value = true;
+    });
+
+    onIonViewDidLeave(() => {
+      console.log("Home page did leave");
+      isOpen.value = false;
+    });
+
+    onIonViewWillEnter(() => {
+      console.log("Home page will enter");
+      isOpen.value = true;
+    });
+
+    onIonViewWillLeave(() => {
+      console.log("Home page will leave");
+      isOpen.value = false;
+    });
+    return {
+      isOpen
     };
   },
   computed: {
@@ -281,6 +313,9 @@ export default {
   mounted() {
     this.itemId = parseInt(this.$route.params.id);
     this.resto = restaurants.find((item) => item.id == this.itemId) || {};
+    this.menu = this.resto.testimontials.concat(
+      this.resto.testimontials.concat(this.resto.testimontials)
+    );
   },
 
   methods: {
@@ -296,7 +331,7 @@ export default {
 
 <style scoped>
 .sheet-modal {
-  height: calc(100vh - 300px);
+  height: calc(100vh + 300px);
 }
 
 ion-modal {

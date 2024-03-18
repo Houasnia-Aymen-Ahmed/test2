@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content class="bg-transparent">
       <search-and-filter
-        class="bg-transparent px-[25px] mt-[18px]"
+        class="bg-transparent px-[25px] mt-[2.2167vh]"
         :showFilter="false"
       />
       <order-map
@@ -11,7 +11,7 @@
         @onMarkerClicked="markerClicked"
       ></order-map>
       <div
-        class="fixed bottom-[16px] bg-slate-200 shadow-none bg-transparent w-[91.2%] h-[22.29vh] mt-[20px] mx-[17px] rounded-[22px] flex flex-col pt-[24px]"
+        class="fixed bottom-[16px] bg-slate-200 shadow-none bg-transparent w-[91.2%] h-[22.29vh] mt-[2.4631vh] mx-[17px] rounded-[22px] flex flex-col pt-[24px]"
       >
         <ion-text
           class="pl-[10px] mb-[16px] font-primarySans text-[14px] leading-[14.14px] tracking-[0.5px] text-[#3B3B3B] text-opacity-30"

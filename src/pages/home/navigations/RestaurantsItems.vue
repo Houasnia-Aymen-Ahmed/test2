@@ -16,12 +16,12 @@
             class="w-full flex flex-row justify-between px-[25px]"
           />
           <div
-            class="w-full flex flex-row items-center justify-around flex-wrap mt-[20px]"
+            class="w-full flex flex-row items-center justify-around flex-wrap mt-[2.4631vh]"
           >
             <div
               v-for="restaurant in restaurants"
               :key="restaurant.id"
-              class="w-[39.2%] h-[22.66vh] shadow-primary-shadow rounded-[22px] overflow-hidden mb-[20px]"
+              class="w-[39.2%] h-[22.66vh] shadow-primary-shadow rounded-[22px] overflow-hidden mb-[2.4631vh]"
             >
               <restaurant-card :restaurant="restaurant" />
             </div>

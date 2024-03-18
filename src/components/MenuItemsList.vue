@@ -1,5 +1,5 @@
 <template>
-  <ion-list class="flex flex-col items-center gap-[20px] mt-[25px]">
+  <ion-list class="flex flex-col items-center gap-[2.4631vh] mt-[3.0788vh]">
     <ion-item
       v-for="item in menuItems"
       :key="item.id"

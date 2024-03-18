@@ -8,7 +8,7 @@
         :alt="IllustrationDone.toString()"
         class="w-[45.866%] h-[19.95vh]"
       />
-      <ion-card class="shadow-none mt-[33px]">
+      <ion-card class="shadow-none mt-[4.0640vh]">
         <ion-card-header class="p-0">
           <ion-card-title
             class="font-primaryBold text-center text-[30px] leading-[39.31px] font-normal bg-green-gradient bg-clip-text text-transparent p-0"
@@ -16,7 +16,7 @@
           </ion-card-title>
         </ion-card-header>
         <ion-card-content
-          class="font-primaryBold text-center text-[23px] leading-[30.14px] font-normal text-tertiary p-0 mt-[12px]"
+          class="font-primaryBold text-center text-[23px] leading-[30.14px] font-normal text-tertiary p-0 mt-[1.4778vh]"
         >
           Your Profile Is Ready To Use
         </ion-card-content>

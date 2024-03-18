@@ -11,7 +11,7 @@
           />
           <div
             v-if="chatItem"
-            class="flex flex-row items-center justify-between px-[13px] w-[92.533%] h-[11.453vh] shadow-primary-shadow p-0 rounded-[22px] bg-white mt-[25px]"
+            class="flex flex-row items-center justify-between px-[13px] w-[92.533vw] h-[11.453vh] shadow-primary-shadow p-0 rounded-[22px] bg-white mt-[25px]"
           >
             <ion-img
               :src="chatItem.image"

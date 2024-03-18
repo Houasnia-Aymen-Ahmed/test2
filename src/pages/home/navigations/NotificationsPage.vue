@@ -10,8 +10,10 @@
             customClass="font-primaryBold text-left text-[25px] text-tertiary leading-[32.76px] font-normal"
           />
         </div>
-        <div class="w-full mt-[25px]">
-          <ion-list class="flex flex-col items-center gap-[20px] mt-[25px]">
+        <div class="w-full mt-[3.0788vh]">
+          <ion-list
+            class="flex flex-col items-center gap-[2.4631vh] mt-[3.0788vh]"
+          >
             <ion-item
               v-for="item in notifications"
               :key="item.id"

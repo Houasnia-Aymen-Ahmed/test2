@@ -11,7 +11,7 @@
       v-if="showFilter"
       class="w-[49px] h-[50px] ml-[9px] rounded-[15px] bg-[#F9A84D] bg-opacity-10 flex justify-center items-center"
     >
-      <ion-icon :icon="filter" class="w-[20px] h-[17.78px] self-center" />
+      <ion-icon :icon="filter" class="w-[2.4631vh] h-[17.78px] self-center" />
     </div>
   </div>
 </template>

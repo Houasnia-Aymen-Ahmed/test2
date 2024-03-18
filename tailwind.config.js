@@ -45,7 +45,7 @@ export default {
       },
       boxShadow: {
         "primary-shadow": "12px 26px 50px 0px #5a6cea12",
-        "secondary-shadow": "0px 0px 50px 15px #5a6cea12"
+        "secondary-shadow": "0px 0px 50px 0px #5a6cea12",
       },
       fontFamily: {
         primarySans: ["BentonSansBook", "sans-serif"],

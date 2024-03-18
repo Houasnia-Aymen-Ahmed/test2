@@ -10,7 +10,7 @@
             customClass="font-primaryBold text-left text-[25px] text-tertiary leading-[32.76px] font-normal"
           />
           <ion-list
-            class="w-full flex flex-col flex-1 items-center gap-[20px] mt-[25px]"
+            class="w-full flex flex-col flex-1 items-center gap-[2.4631vh] mt-[3.0788vh]"
           >
             <ion-item-sliding
               v-for="(order, index) in orders"
@@ -29,12 +29,12 @@
                       {{ order.name }}
                     </ion-text>
                     <ion-text
-                      class="font-primarySans text-[#3B3B3B] text-opacity-30 text-left font-normal text-[14px] leading-[19.65px] tracking-[0.5px] mt-[4px]"
+                      class="font-primarySans text-[#3B3B3B] text-opacity-30 text-left font-normal text-[14px] leading-[19.65px] tracking-[0.5px] mt-[0.4926vh]"
                     >
                       {{ order.description }}
                     </ion-text>
                     <ion-text
-                      class="leading-[24.89px] text-[19px] bg-green-gradient text-transparent bg-clip-text font-primaryBold mt-[8px]"
+                      class="leading-[24.89px] text-[19px] bg-green-gradient text-transparent bg-clip-text font-primaryBold mt-[0.9852vh]"
                     >
                       $ {{ order.price }}
                     </ion-text>
@@ -77,11 +77,11 @@
             </ion-item-sliding>
           </ion-list>
           <div
-            class="fixed bottom-[16px] bg-green-gradient shadow-none bg-transparent m-0 w-[92.2667%] h-[25.369vh] mt-[20px] rounded-[22px]"
+            class="fixed bottom-[16px] bg-green-gradient shadow-none bg-transparent m-0 w-[92.2667%] h-[25.369vh] mt-[2.4631vh] rounded-[22px]"
           >
             <div class="flex flex-col pattern-bg-card w-full h-full">
               <div
-                class="flex flex-col justify-between flex-1 px-[29px] pt-[20px] pb-[22px] gap-[7px]"
+                class="flex flex-col justify-between flex-1 px-[29px] pt-[2.4631vh] pb-[22px] gap-[7px]"
               >
                 <div class="flex flex-col gap-[7px]">
                   <ion-text

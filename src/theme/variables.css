@@ -1,8 +1,9 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins&family=Viga&display=swap")
-  @tailwind base;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins&family=Viga&display=swap");
+
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -283,6 +284,7 @@ http://ionicframework.com/docs/theming/ */
     --ion-background-color: var(--ion-color-step-100);
     --ion-toolbar-background: var(--ion-color-step-150);
     --ion-toolbar-border-color: var(--ion-color-step-250);
+    --border-radius: 35px 35px 0px 0px !important ;
   }
 
   /*
@@ -347,7 +349,7 @@ ion-input.custom-input {
   border-radius: 15px;
   box-shadow: 12px 26px 50px 0px #5a6cea12;
 
-  min-height: 57px !important;
+  min-height: 7.0197vh !important;
 
   --placeholder-color: theme("colors.placeHolderColor");
   --placeholder-opacity: 0.3;
@@ -369,4 +371,13 @@ ion-toolbar.custom-toolbar {
   --padding-top: 4.68vh;
   --padding-start: 6.667%;
   --padding-end: 6.667%;
+}
+
+.gradient-text-underline {
+  @apply no-underline bg-green-gradient text-transparent bg-clip-text py-0 px-0 relative;
+}
+
+.gradient-text-underline::after {
+  @apply absolute w-full h-[1px] bottom-1 left-0 bg-green-gradient opacity-30;
+  content: "";
 }

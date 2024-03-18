@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-cover bg-pattern h-full">
+  <div class="bg-cover bg-pattern h-screen">
     <div class="flex flex-col items-center w-full h-full">
       <auth-card title="Sign Up For Free" />
       <div
-        class="flex flex-col gap-[12px] w-[86.667%] h-[24.0147vh] mb-[20px] z-0"
+        class="flex flex-col gap-[1.477vh] w-[86.667%] h-[24.0147vh] mb-[2.463vh]"
       >
         <ion-input
           aria-label="Name"
@@ -13,7 +13,7 @@
           :clear-on-edit="true"
           class="custom-input"
         >
-          <input-icon :icon="profile" />
+          <input-icon :icon="profile" class="opacity-50" />
         </ion-input>
         <ion-input
           aria-label="Email"
@@ -38,23 +38,27 @@
         </ion-input>
       </div>
       <div
-        class="w-full flex flex-col justify-center items-start gap-[12px] px-[22px]"
+        class="flex flex-col justify-center items-start gap-[1.477vh] w-[86.667%]"
       >
         <checkbox-txt text="Keep me Signed in" />
         <checkbox-txt text="Email me about special pricing" />
       </div>
-      <primary-btn
-        class="absolute bottom-[7.389vh] w-full flex-1 justify-center items-center"
-        text="Create an Account"
-        buttonWidth="46.667%"
-        @click="moveToNextSlide"
-      />
-      <ion-text
-        @click="switchToLoginPage"
-        class="absolute bottom-[2.586vh] font-primaryMedium text-center underline text-[12px] leading-[19.98px] font-normal text-transparent bg-clip-text bg-green-gradient"
+      <div
+        class="flex flex-col justify-end items-center mt-auto w-full mb-[2.586vh] gap-[2.586vh]"
       >
-        already have an account?
-      </ion-text>
+        <primary-btn
+          class="w-full flex justify-center items-center"
+          text="Create an Account"
+          buttonWidth="46.667%"
+          @click="moveToNextSlide"
+        />
+        <ion-text
+          @click="switchToLoginPage"
+          class="font-primaryMedium text-center text-[12px] leading-[19.98px] font-normal gradient-text-underline"
+        >
+          already have an account?
+        </ion-text>
+      </div>
     </div>
   </div>
 </template>
@@ -96,7 +100,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 ion-button.customBtn {
   --background: #ffffff;
   color: #000;

@@ -5,19 +5,23 @@
       :alt="image.toString()"
       class="w-[108.9333%] h-[53.4754vh] mt-[6.999vh]"
     />
-    <ion-card class="shadow-none w-[65.0667%] h-[15.024vh] m-0 mt-[4.797vh]">
-      <ion-card-header class="m-0 p-0">
-        <ion-card-title
-          class="font-primaryBold text-center text-[22px] leading-[28.83px] font-normal px-[16px]"
-          >{{ title }}
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content
-        class="font-primarySans text-center text-[12px] leading-[21.66px] font-normal mt-[20px] p-0"
+    <div
+      :class="`shadow-none h-[15.024vh] m-0 mt-[4.797vh] flex flex-col items-center justify-center ${
+        index === 1 ? 'w-[65.0667%] px-[4.26%]' : 'w-[92.8%] px-[4.467%]'
+      }`"
+    >
+      <ion-text
+        class="font-primaryBold text-center text-[22px] leading-[28.83px] font-normal"
+        >{{ title }}
+      </ion-text>
+      <ion-text
+        :class="`font-primarySans text-center text-[12px] leading-[21.66px] font-normal mt-[2.46vh] ${
+          index === 1 ? 'px-0' : 'px-[17%]'
+        }`"
       >
         {{ content }}
-      </ion-card-content>
-    </ion-card>
+      </ion-text>
+    </div>
     <primary-btn
       class="absolute bottom-[7.389vh] w-full flex-1 justify-center items-center"
       text="Next"
@@ -27,27 +31,18 @@
 </template>
 
 <script>
-import {
-  IonImg,
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent
-} from "@ionic/vue";
+import { IonImg } from "@ionic/vue";
 import PrimaryBtn from "@/components/PrimaryBtn.vue";
 
 export default {
   props: {
     image: String,
     title: String,
-    content: String
+    content: String,
+    index: Number
   },
   components: {
     IonImg,
-    IonCard,
-    IonCardHeader,
-    IonCardTitle,
-    IonCardContent,
     PrimaryBtn
   },
   methods: {

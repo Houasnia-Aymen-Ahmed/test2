@@ -27,7 +27,12 @@ import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
 /* Theme variables */
 import "./theme/variables.css";
 
-const app = createApp(App).use(IonicVue).use(router).use(VueVirtualScroller);
+const app = createApp(App)
+  .use(IonicVue, {
+    mode: "ios"
+  })
+  .use(router)
+  .use(VueVirtualScroller);
 
 router.isReady().then(() => {
   app.mount("#app");

@@ -1,6 +1,6 @@
 <template>
   <ion-page class="w-full h-screen">
-    <ion-content scrollY="false">
+    <ion-content scrollY="true">
       <component :is="currentPage" @switchPage="switchPage" />
     </ion-content>
   </ion-page>
@@ -23,7 +23,40 @@ export default {
   methods: {
     switchPage(page) {
       this.currentPage = page;
+    },
+    onResize() {
+      const keyboardHeight =
+        window.innerHeight - document.documentElement.clientHeight;
+      if (keyboardHeight > 0) {
+        // Keyboard is open, adjust styles
+        document.body.style.setProperty(
+          "--custom-keyboard-offset",
+          `${keyboardHeight}px`
+        );
+      } else {
+        // Keyboard is closed, remove custom offset
+        document.body.style.removeProperty("--custom-keyboard-offset");
+      }
     }
   }
 };
 </script>
+<!-- 
+<style scoped>
+ion-content {
+  --keyboard-offset: 0 !important;
+}
+</style>
+ -->
+
+<style scoped>
+@media (max-height: calc(100vh - 290px)) {
+  /* Adjust the value based on your keyboard height */
+  .no-keyboard-offset {
+    /* Apply to relevant elements */
+    padding-bottom: var(
+      --custom-keyboard-offset
+    ); /* Adjust padding or margin as needed */
+  }
+}
+</style>

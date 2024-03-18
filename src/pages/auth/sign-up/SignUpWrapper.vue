@@ -1,5 +1,5 @@
 <template>
-  <swiper class="h-full" @swiper="onSwiper">
+  <swiper class="h-screen" @swiper="onSwiper">
     <template v-for="s in swiperData" :key="s.id">
       <swiper-slide>
         <component

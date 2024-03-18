@@ -13,6 +13,7 @@ import message from "./message.svg";
 import notification_icon from "./notification_icon.svg";
 import notification_icon_circle from "./notification_icon_circle.svg";
 import profile from "./profile.svg";
+import profile50 from "./profile50.svg";
 import send from "./send.svg";
 import show from "./show.svg";
 import check from "./check.png";
@@ -40,6 +41,7 @@ export {
   notification_icon,
   notification_icon_circle,
   profile,
+  profile50,
   send,
   show,
   check,

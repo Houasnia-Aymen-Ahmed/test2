@@ -1,20 +1,23 @@
 <template>
-  <div class="bg-cover bg-patternMasked h-full">
+  <div class="bg-cover bg-patternMasked h-screen">
     <div class="flex flex-col items-center justify-start w-full h-full">
       <header-back-btn @backClicked="moveToPrevSlide" />
-      <div class="flex flex-col items-start justify-center px-[25px] mt-[20px]">
+      <div class="flex flex-col items-start justify-center mt-[2.4631vh]">
         <card-comp
           title="Fill in your bio to get started"
           content="This data will be displayed in your account profile for security"
+          class="px-[6.6667vw]"
         />
-        <div class="flex flex-col gap-[10px] items-center mt-[20px] w-full">
+        <div
+          class="flex flex-col gap-[2.4631vh] items-center mt-[2.4631vh] w-full px-[3.733vw]"
+        >
           <ion-input
             aria-label="First Name"
             type="text"
             placeholder="First Name"
             required="true"
             :clear-on-edit="true"
-            class="custom-input"
+            class="custom-input !border-0 !shadow-secondary-shadow"
           />
           <ion-input
             aria-label="Last Name"
@@ -22,7 +25,7 @@
             placeholder="Last Name"
             required="true"
             :clear-on-edit="true"
-            class="custom-input"
+            class="custom-input !border-0 !shadow-secondary-shadow"
           />
           <ion-input
             aria-label="Mobile Number"
@@ -30,7 +33,7 @@
             placeholder="Mobile Number"
             required="true"
             :clear-on-edit="true"
-            class="custom-input"
+            class="custom-input !border-0 !shadow-secondary-shadow"
           />
         </div>
       </div>
