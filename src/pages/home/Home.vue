@@ -96,11 +96,13 @@ export default {
     };
   },
   mounted() {
-    // Set initial active tab based on current route
+    if (!localStorage.getItem("getStartedVisited")) {
+      this.$router.push("/get-started");
+      localStorage.setItem("getStartedVisited", true);
+    }
     this.activeTab = this.$route.path.split("/")[1];
   },
   watch: {
-    // Watch for changes in route and update active tab accordingly
     $route(to) {
       this.activeTab = to.path.split("/")[1];
     }

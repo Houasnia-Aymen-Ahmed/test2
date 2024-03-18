@@ -63,6 +63,9 @@ export default {
       IllustrationGetStarted2
     };
   },
+  mounted() {
+    localStorage.setItem("getStartedVisited", true);
+  },
   methods: {
     onSwiper(swiper) {
       this.swiper = swiper;

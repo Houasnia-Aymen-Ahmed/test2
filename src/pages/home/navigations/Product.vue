@@ -12,7 +12,8 @@
             :initial-breakpoint="0.6465"
             :breakpoints="[0.5, 0.6465, 0.9384]"
           >
-            <div class="w-full sheet-modal overflow-y-scroll mt-[5.4803vh]">
+            <header-back-btn @backClicked="goBack" />
+            <div class="w-full sheet-modal overflow-y-scroll mt-[1.4803vh]">
               <div
                 class="flex flex-row item-center w-full justify-between mb-[2.4015vh] px-[8.8000vw]"
               >
@@ -229,7 +230,7 @@
 <script>
 import { ref } from "vue";
 import { heartSharp } from "ionicons/icons";
-import { ViewMoreAndTitle } from "@/components";
+import { HeaderBackBtn, ViewMoreAndTitle } from "@/components";
 import { restaurants } from "@/utils/constants";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
@@ -269,6 +270,7 @@ export default {
     IonModal,
     ViewMoreAndTitle,
     Swiper,
+    HeaderBackBtn,
     SwiperSlide
   },
   data() {
@@ -339,7 +341,7 @@ export default {
       this.showLess = !this.showLess;
     },
     goBack() {
-      this.$router.go(-1);
+      this.$router.push("/home");
     }
   }
 };
